@@ -26,8 +26,11 @@ window.addEventListener('load', function () {
         console.log(arret[i].stop_name);
 
         //constructor(stop_name, location_type, stop_id, stop_coordinates)
+        // ================================================================================
         // METTRE ICI un appel AJAX pour récupérer les informations du fichier JSON TAN
-        // 
+
+        //getArretInfo(urlBase,tanArrets,tanArretsRefine+arret[i].stop_name);
+        // ================================================================================
         var coord = [47, -1];
         lstArrets[i] = new Arret(arret[i].stop_name, "1", "arret[i].stop_id", coord);
         console.log(lstArrets[i].stop_name);
