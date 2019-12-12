@@ -1,0 +1,100 @@
+/* ====================================
+  File: css_Classes.css 
+  This file defines the tags styles
+
+
+
+ ==================================== */
+
+
+
+/* ==============================================================================
+   @grp Classes                                                                  
+============================================================================== */
+  /* positionnement */
+    .droite{float:right;}
+    .gauche{float:left;}
+    .clear{ clear:both; }
+    .clearD{  clear:right; }
+    .clearG{  clear:left; }
+    .clear,
+    .clearG,
+    .clearD{
+      display:block;
+      height:0;
+    }
+  
+  /* visibilité */
+    .cache{ display:none; }
+    .inactif{ background:#666; color:#999;}
+    .actif{ background:#CF0; color:#999;}
+  
+  /* marges externes */
+    .mg_10{ margin:10px; }
+    .mg_20{ margin:10px; }
+    .mg_30{ margin:10px; }
+    .mg_40{ margin:10px; }
+    .mgh_10{ margin-top:10px; } 
+    .mgh_20{ margin-top:20px; } 
+    .mgh_30{ margin-top:30px; } 
+    .mgh_40{ margin-top:40px; } 
+    
+  /* marges externes */
+    .pad_10{ padding:10px; }
+    .pad_20{ padding:20px; }
+    .pad_30{ padding:30px; }
+    .pad_40{ padding:40px; }
+    
+  /* couleurs */
+    .txt_rouge{ color:#F00; }
+    .txt_bleu { color:#09C; }
+    .txt_vert { color:#093; }
+    .txt_orange{ color:#F90; }
+    
+    .bg_rouge{ background:#F00; }
+    .bg_bleu { background:#09C; }
+    .bg_vert { background:#093; }
+    .bg_orange { background:#F90; }
+    .bg_noir { background:#000; }
+    
+  /* taille texte */
+    .txt_h10 { font-size:10px; }
+    
+  /* Classe pour gérer une div en Debug info*/
+  #debug_Info,
+  #debug{
+    position:fixed;
+    top:70px;
+    right:5px;
+    background:#C60;
+    color:#CCC;
+    padding:5px 10px;
+    z-index:2000;
+  }
+
+.bt {
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin: 11px;
+  border: 1px #555 solid;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  padding: 10px 10px;
+}
+.bgRouge {
+  background-color: #f43f3f;
+  color: #FFF;
+}
+.bgVert {
+  background-color: #3ea23e;
+  color: #FFF;
+}
+.bgBleu {
+  background-color: #648ad2;
+  color: #FFF;
+}
+/* @grp Classes  (FIN)
+============================================================================== */

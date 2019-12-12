@@ -1,0 +1,239 @@
+/* ====================================
+  File: css_Tags.css 
+  This file defines the tags styles
+
+   @grp IDs de base
+   @grp Trafic Temps Réel  
+ ==================================== */
+
+
+/* ==============================================================================
+   @grp IDs de base                                                             
+============================================================================== */
+  #wrapper {
+    background: #E1E1E1;
+    width: 90%;
+    min-height: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+    padding: 0;
+  }
+  header{
+    position: relative;
+    background-color: #eee;
+    min-height: 80px;
+  }
+  header nav{
+    position: absolute;
+    bottom: 0;
+  }
+  header ul{
+    display: flex;
+    justify-content: flex-start;
+  }
+  header ul li{
+    display: block;
+  }
+  header ul li a:link,
+  header ul li a:visited {
+    display: block;
+    background-color: #313731;
+    text-transform: uppercase;
+    min-width: 150px;
+    margin-right: 2px;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-align: center;
+  }
+  header ul li a:hover,
+  header ul li a:active {
+    background-color: #3f593f;
+    color: #FFF;
+    text-decoration: none;
+  }
+  #wrapper > h2 {
+    background-color: #ceecc7;
+  }
+  #list_Horaires,
+  #list_Arrets{
+    background: #fff;
+    padding: 8px 10px 5px;
+    margin: 1px auto;
+    width: 80%;
+  }
+  #list_Horaires .Horaires{
+    background-color: #eee;
+  }
+  #list_Horaires .Horaires .intitule h3 {
+    background-color: #454a32;
+    color: #FFF;
+  }
+  #list_Horaires div.heure {
+    float: left;
+    background-color: #d8e5e6;
+    width: 12.5%;
+    min-height: 280px;
+    border: 0px #999 solid;
+  }
+  #list_Horaires table.heure {
+    background-color: #e1e8d8;
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 98%;
+    margin: 2px auto;
+    border: 1px #CCC solid;
+  }
+  #list_Horaires table.heure tr {
+    background-color: #e1e8d8;
+    border-bottom: 1px #CCC solid;
+  }
+  #list_Horaires table.heure tr:hover {
+    background-color: #c9cebe;
+  }
+
+
+  #list_Horaires table.heure th {
+    background-color: #324f2e;
+    color: #FFF;
+  }
+  #list_Horaires table.heure td {
+    padding: 3px 10px;
+    text-align: center;
+  }
+  .lien_Confirmation {
+    background-color: #cecdb7;
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px 20px 10px;
+  }
+  .lien_Confirmation {
+    background-color: #fff;
+    width: 85%;
+    margin: 5px auto;
+    padding: 20px 20px 10px;
+    border-radius: 10px;
+    border: 2px #bbb solid;
+  }
+  #rec_Texte .lien_Confirmation a {
+    color: #ec2f2f;
+  }
+  .list_Arrets {
+    background: #ececec;
+    border: 1px #eee solid;
+    margin-bottom: 3px;
+    padding: 20px 10px;
+  }
+
+  .Arret { 
+    background-color: #efefef;
+    border:1px #ccc solid; 
+    margin: 2px;
+  }
+  .Arret:hover{
+    background-color: #FFF;
+    border:1px #bbb solid;
+  }
+  .Arret h3 {
+    float: left;
+    background-color: transparent;
+    background-image: url("../images/circleStop.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    width: 55%;
+    height: 40px;
+    padding: 8px 10px 8px 46px;
+  }  
+  .Arret:hover h3{ background-position: 0 -40px; }
+  #pagination {
+    display: flex;
+    justify-content: space-around;
+    background: #FFF;
+    width: 50%;
+    margin: 2px auto;
+  }
+  .bt_Prev,
+  .bt_Next {
+    padding: 5px;
+  }
+  .coordonnees {
+    float: left;
+    width: 45%;
+    height: 40px;
+    margin: 0;
+  }
+  
+
+  .coordonnees a:link{
+    display: block;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px 15px;
+    margin: 0 auto;
+  }
+  .Arret h3 span.code {
+    display: block;
+    float: right;
+    font-size: 11px;
+    letter-spacing: normal;
+  }
+/* @grp IDs de base  (FIN)
+============================================================================== */
+
+
+/* ==============================================================================
+   @grp Trafic Temps Réel                                                             
+============================================================================== */
+/* Pour info-trafic-tan-temps-reel  =========== */
+.info-trafic-tan-temps-reel {
+  background: #fff;
+  margin: 5px;
+  border: 1px #dbd8d8 solid;
+  padding: 10px 15px;
+}
+.code {
+  font-size: 0.8em;
+  color: #81aaf9;
+}
+.texte_vocal {
+  padding: 10px 20px 5px;
+  border-bottom: 1px #dbd8d8 solid;
+  font-weight: 500;
+}
+.dates {
+  margin: 10px auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+.date_debut,
+.date_fin {
+  background: #bdf2b5;
+  width: 45%;
+  margin: 2px;
+  padding: 5px 10px;
+}
+.date_fin:after {
+  clear: both;
+}
+.intitule{
+  background: #fff;
+}
+.troncons{
+  background: #fff;
+}
+.resume {
+  width: 50%;
+  min-height: 110px;
+  border: 2px #90909f solid;
+  padding: 15px 10px;
+  margin: 8px auto;
+  background: #fff;
+}
+/* @grp Trafic Temps Réel  (FIN)
+============================================================================== */
