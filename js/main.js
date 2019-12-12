@@ -3,6 +3,10 @@ import { Arret } from "./arret.js";
 /* ====================================
  Déclaration des variables  URL
 ==================================== */
+/*
+https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_tan-arrets&refine.stop_name=Bd De Doulon
+https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_tan-arrets&refine.stop_name=Littr%C3%A9
+*/
 let url_Base = 'https://data.nantesmetropole.fr/api/records/1.0/search/';
 let tanArrets = "?dataset=244400404_tan-arrets";
 let tanCircuits = "?dataset=244400404_tan-circuits";
@@ -21,9 +25,9 @@ window.addEventListener('load', function () {
     console.log(lstArretsC3.records.fields);
     let arret = lstArretsC3.records.fields;
     for (i = 0; i < arret.length; i++) {
-        console.log("arret.stop_name");
-        console.log(arret);
-        console.log(arret[i].stop_name);
+        // console.log("arret.stop_name");
+        // console.log(arret);
+        // console.log(arret[i].stop_name);
 
         //constructor(stop_name, location_type, stop_id, stop_coordinates)
         // ================================================================================
@@ -35,44 +39,9 @@ window.addEventListener('load', function () {
         lstArrets[i] = new Arret(arret[i].stop_name, "1", "arret[i].stop_id", coord);
         console.log(lstArrets[i].stop_name);
     }
-    let objResult = document.getElementById("result");
-    console.log(objResult);
-    let html = `<pre>{
-        "records": {
-            "fields": [
-                {
-                "stop_coordinates": [
-                    47.25034785,
-                    -1.4851167
-                ],
-                "stop_name": "Bd De Doulon",
-                "location_type": "1",
-                "stop_id": ""
-                },
-                {
-                "stop_coordinates": [
-                    47.25034785,
-                    -1.4851167
-                ],
-                "stop_name": "Bd De Doulon",
-                "location_type": "1",
-                "stop_id": ""
-                }
-            ]
-        }</pre>`;
-    /*
-    {
-        "records": {
-            "fields": [{
-                "stop_coordinates": [
-                    47.25034785,
-                    -1.4851167
-                ],
-                "stop_name": "Bd De Doulon",
-                "location_type": "1",
-                "stop_id": ""
-            }
-    */
+
+    let html = `<pre>Voir si je peux appeler l'AJAX par ici (voir commentaire dans main.js )`;
+/*
     for (i = 0; i < lstArrets.length; i++) {
         console.log(lstArrets[i].stop_name);
 
@@ -84,10 +53,8 @@ window.addEventListener('load', function () {
             html += "}<br/>";
         }
     }
-    html += `}</pre>`;
-    objResult.innerHTML = html
-
-    console.log(lstArrets);
-
+*/
+    html += `</pre>`;
+    document.getElementById("result").innerHTML = html
 
 });
