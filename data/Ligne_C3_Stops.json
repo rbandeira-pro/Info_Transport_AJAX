@@ -1,6 +1,11 @@
 {
     "records": {
+<<<<<<< HEAD
         "fields": [{
+=======
+        "fields": [
+            {
+>>>>>>> dc9b11df35df14483993aa25be57a87fa98026b2
             "stop_coordinates": [
                 47.25034785,
                 -1.4851167

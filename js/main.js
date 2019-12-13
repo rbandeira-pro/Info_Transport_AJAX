@@ -1,96 +1,62 @@
+import { Arret } from "./arret.js";
+
+/* ====================================
+ Déclaration des variables  URL
+==================================== */
+/*
+https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_tan-arrets&refine.stop_name=Bd De Doulon
+https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_tan-arrets&refine.stop_name=Littr%C3%A9
+*/
+let url_Base = 'https://data.nantesmetropole.fr/api/records/1.0/search/';
+
+let tanArrets = "?dataset=244400404_tan-arrets";
+
+let tanCircuits = "?dataset=244400404_tan-circuits";
+
+// url_Base + '?dataset=244400404_tan-arrets'
+/* ==================================== */
 
 
 window.addEventListener('load', function () {
-    
-    
-    
 
-
-
-    class Arret {
-
-        constructor(modele, immatriculation, Km, vendue) {
-            this.modele = modele;
-            this.immatriculation = immatriculation;
-            this.Km = Km;
-            this.vendue = vendue;
-        }
-        Facturer() {
-            console.log("Acheter");
-        }
-        Acheter() {
-            console.log("Acheter");
-        }
-    }
 
     console.warn('Ceci est un Warning!');
 
-    lstVoitures = new Array();
-    voit01 = new Voiture("Lotus", "BBx-404-Serv", 100, false);
-    voit02 = new Voiture("Ferrari", "OK-200-Serv", 100, false);
-    voit03 = new Voiture("Ferraille", "Err-500-Serv", 100, false);
-    voit04 = new Voiture("La casse", "Err-550-Serv", 200000, false);
-    let i = 0;
-    lstVoitures[i] = voit01;
-    lstVoitures[i++] = voit02;
-    lstVoitures[i++] = voit03;
-    lstVoitures[i++] = voit04;
+    let lstArrets = new Array();
+    var i = 0;
+    console.log(lstArretsC3.records.fields);
+    let arret = lstArretsC3.records.fields;
+    for (i = 0; i < arret.length; i++) {
+        // console.log("arret.stop_name");
+        // console.log(arret);
+        // console.log(arret[i].stop_name);
 
-    objResult = document.getElementById("result");
-    console.log(objResult);
-    html = `<pre>{
-        "records": {
-            "fields": [
-                {
-                "stop_coordinates": [
-                    47.25034785,
-                    -1.4851167
-                ],
-                "stop_name": "Bd De Doulon",
-                "location_type": "1",
-                "stop_id": ""
-                },
-                {
-                "stop_coordinates": [
-                    47.25034785,
-                    -1.4851167
-                ],
-                "stop_name": "Bd De Doulon",
-                "location_type": "1",
-                "stop_id": ""
-                }
-            ]
-        }</pre>`;
+        //constructor(stop_name, location_type, stop_id, stop_coordinates)
+        // ================================================================================
+        // METTRE ICI un appel AJAX pour récupérer les informations du fichier JSON TAN
+
+        //getArretInfo(urlBase,tanArrets,tanArretsRefine+arret[i].stop_name);
+        // ================================================================================
+        var coord = [47, -1];
+        lstArrets[i] = new Arret(arret[i].stop_name, "1", "arret[i].stop_id", coord);
+        console.log(lstArrets[i].stop_name);
+    }
+
+    let html = `<pre>Voir si je peux appeler l'AJAX par ici (voir commentaire dans main.js )`;
 /*
-{
-    "records": {
-        "fields": [{
-            "stop_coordinates": [
-                47.25034785,
-                -1.4851167
-            ],
-            "stop_name": "Bd De Doulon",
-            "location_type": "1",
-            "stop_id": ""
-        }
-*/
-    for (i = 0; i < lstVoitures.length; i++) {
+    for (i = 0; i < lstArrets.length; i++) {
+        console.log(lstArrets[i].stop_name);
+
         html += `{ 
-            "modele" : "${lstVoitures[i].modele}",
-            "immatriculation" : "${lstVoitures[i].immatriculation}",
-            "Km" : "${lstVoitures[i].Km}",
-            "vendue" : "${lstVoitures[i].vendue}"
-            `;
-        if(i < lstVoitures.length-1 ){
+            "stop_name" : "${lstArrets[i].stop_name}"`;
+        if (i < lstArrets.length - 1) {
             html += "},<br/>";
-        }else{
+        } else {
             html += "}<br/>";
         }
     }
-    html+=`}</pre>`;
-    objResult.innerHTML = html
-
-    console.log(lstVoitures);
-
+*/
+    html += `</pre>`;
+    document.getElementById("result").innerHTML = html
 
 });
